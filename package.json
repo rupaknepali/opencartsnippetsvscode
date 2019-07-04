@@ -1,16 +1,16 @@
 {
   "name": "ocsnippets",
-  "displayName": "ocsnippets",
+  "displayName": "Opencart Code snippets",
   "description": "Opencart code snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rupaknepali/webocreation"
+    "url": "https://github.com/rupaknepali/opencartsnippetsvscode"
   },
   "icon": "icon.png",
-  "publisher": "Webocreation.com",
+  "publisher": "webocreationcom",
   "engines": {
-    "vscode": "^1.36.0"
+    "vscode": "^1.27.0"
   },
   "categories": [
     "Snippets"
