@@ -1,0 +1,59 @@
+{
+  "Controller": {
+    "prefix": "occ",
+    "body": [
+      "class Controller${1:Folder}${2:ControllerName} extends Controller {",
+      "\tpublic function index() {",
+      "\t\t\\$this->load->language('${1:Folder}/${2:ControllerName}');",
+      "\t\t\\$this->document->setTitle(\\$this->language->get('heading_title'));",
+      "\t\t\\$this->document->setDescription(\\$this->language->get['meta_description']);",
+      "\t\t\\$this->document->setKeywords(\\$this->language->get['meta_keyword']);",
+      "\n",
+      "\t\t\\$data['breadcrumbs'] = array();",
+      "\t\t\\$data['breadcrumbs'][] = array(",
+      "\t\t\t'text' => \\$this->language->get('text_home'),",
+      "\t\t\t'href' => \\$this->url->link('common/home')",
+      "\t\t);",
+      "\t\t\\$data['breadcrumbs'][] = array(",
+      "\t\t\t'text' => \\$this->language->get('text_${2:ControllerName}'),",
+      "\t\t\t'href' => \\$this->url->link('${1:Folder}/${2:ControllerName}', '', true)",
+      "\t\t);",
+      "\n\n",
+      "\t\t\\$data['column_left'] = \\$this->load->controller('common/column_left');",
+      "\t\t\\$data['column_right'] = \\$this->load->controller('common/column_right');",
+      "\t\t\\$data['content_top'] = \\$this->load->controller('common/content_top');",
+      "\t\t\\$data['content_bottom'] = \\$this->load->controller('common/content_bottom');",
+      "\t\t\\$data['footer'] = \\$this->load->controller('common/footer');",
+      "\t\t\\$data['header'] = \\$this->load->controller('common/header');",
+      "\n",
+      "\t\t\\$this->response->setOutput(\\$this->load->view('${1:Folder}/${2:ControllerName}', \\$data));",
+      "\t}",
+
+      "}"
+    ],
+    "description": "New Starting Controller"
+  },
+  "New Method": {
+    "prefix": "ocm",
+    "body": ["public function $methodname() {", "\n", "}"],
+    "description": "New method or function"
+  },
+  "New Model": {
+    "prefix": "occm",
+    "body": [
+      "class Model$foldername$mname extends Model",
+      "{",
+      "\tpublic function get$mname(\\$$mname_id)",
+      "\t{",
+      "\t\t$query = $this->db->query(\"\")",
+      "\t}",
+      "}"
+    ],
+    "description": "New Model and starting method"
+  },
+  "New Language line": {
+    "prefix": "ocl",
+    "body": ["\\$_['text_$variable']        = '$languagetext';"],
+    "description": "New Language line"
+  }
+}

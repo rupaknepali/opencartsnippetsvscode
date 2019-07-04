@@ -1,0 +1,30 @@
+{
+  "name": "ocsnippets",
+  "displayName": "ocsnippets",
+  "description": "Opencart code snippets",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rupaknepali/webocreation"
+  },
+  "icon": "icon.png",
+  "publisher": "Webocreation.com",
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/twigsnippets.json"
+      }
+    ]
+  }
+}

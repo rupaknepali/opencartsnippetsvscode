@@ -1,0 +1,72 @@
+{
+  "Twig Template": {
+    "prefix": "oct",
+    "body": [
+      "{{ header }}",
+      "<div id=\"account-account\" class=\"container\">",
+      "\t<ul class=\"breadcrumb\">",
+      "\t\t{% for breadcrumb in breadcrumbs %}",
+      "\t\t<li><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>",
+      "\t\t{% endfor %}",
+      "\t</ul>",
+      "\t{% if success %}",
+      "\t<div class=\"alert alert-success alert-dismissible\"><i class=\"fa fa-check-circle\"></i> {{ success }}</div>",
+      "\t{% endif %}",
+      "\t<div class=\"row\">{{ column_left }}",
+      "\t{% if column_left and column_right %}",
+      "\t\t{% set class = 'col-sm-6' %}",
+      "\t{% elseif column_left or column_right %}",
+      "\t\t{% set class = 'col-sm-9' %}",
+      "\t{% else %}",
+      "\t\t{% set class = 'col-sm-12' %}",
+      "\t{% endif %}",
+      "\t\t<div id=\"content\" class=\"{{ class }}\">",
+      "\t\t{{ content_top }}",
+      "\n",
+      "\n",
+      "\t\t{{ content_bottom }}",
+      "\t\t</div>",
+      "\t\t{{ column_right }}",
+      "\t\t</div>",
+      "\t\t</div>",
+      "\t{{ footer }}"
+    ],
+    "description": "New Template"
+  },
+  "Twig for": {
+    "prefix": "octfor",
+    "body": ["{% for $name1 in $name1s %}", "\t\t$name1", "{% endfor %}"],
+    "description": "Twig for loop"
+  },
+  "Twig if": {
+    "prefix": "octif",
+    "body": ["{% if $name2 %}", "\n", "{% endif %}"],
+    "description": "Twig for loop"
+  },
+  "Button Tag": {
+    "prefix": "ocbtn",
+    "body": [
+      "<button type=\"button\" id=\"$buttonid\" class=\"btn btn-default\" data-toggle=\"tooltip\" title=\"{{ $buttonid }}\"><i class=\"fa fa-th-list\"></i></button>"
+    ],
+    "description": "Bootstrap Button code"
+  },
+  "Image Tag": {
+    "prefix": "ocimg",
+    "body": [
+      "<img src=\"{{ $thumb }}\" alt=\"{{ heading_title }}\"",
+      "\t title=\"{{ heading_title }}\" class=\"img-thumbnail\" />"
+    ],
+    "description": "Image Tag"
+  },
+  "Breadcrumbs": {
+    "prefix": "ocbc",
+    "body": [
+      "<ul class=\"breadcrumb\">",
+      "\t{% for breadcrumb in breadcrumbs %}",
+      "\t\t<li><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>",
+      "\t{% endfor %}",
+      "</ul>"
+    ],
+    "description": "Breadcrumbs"
+  }
+}
