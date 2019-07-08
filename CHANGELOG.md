@@ -2,7 +2,14 @@
 
 All notable changes to the "ocsnippets" extension will be documented in this file.
 
-## [1.0.0]
+## [1.2.0]
+
+- OCMOD support added.
+- ocmod - for install.xml boilerplate creation
+- ocmodf - OCMOD XML file boilerplate
+- ocprf - print_r with pre
+
+## [1.0.2]
 
 - Just version change to support the lower version of VSCode
 

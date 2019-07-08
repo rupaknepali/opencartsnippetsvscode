@@ -55,5 +55,10 @@
     "prefix": "ocl",
     "body": ["\\$_['text_$variable']        = '$languagetext';"],
     "description": "New Language line"
+  },
+  "Print_r": {
+    "prefix": "ocprf",
+    "body": ["echo '<pre>'; \n print_r($objectname); \n echo '</pre>';"],
+    "description": "Print_r function"
   }
 }

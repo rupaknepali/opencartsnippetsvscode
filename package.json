@@ -2,7 +2,7 @@
   "name": "ocsnippets",
   "displayName": "Opencart Code snippets",
   "description": "Opencart code snippets",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/rupaknepali/opencartsnippetsvscode"
@@ -20,6 +20,10 @@
       {
         "language": "php",
         "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/xmlsnippets.json"
       },
       {
         "language": "twig",

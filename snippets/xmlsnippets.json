@@ -1,0 +1,35 @@
+{
+  "OCMOD Boilerplate": {
+    "prefix": "ocmod",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<modification>",
+      "\t<name>$name</name>",
+      "\t<version>$version</version>",
+      "\t<author>$author</author>",
+      "\t<link>$link</link>",
+      "\t<code>$code</code>",
+      "\t<description>$description</description>",
+      "\t<file path=\"$filepath\">",
+      "\t\t<operation>",
+      "\t\t\t<search><![CDATA[  ]]></search>",
+      "\t\t\t<add position=\" \"><![CDATA[ ]]></add>",
+      "\t\t</operation>",
+      "\t</file>",
+      "\t</modification>"
+    ],
+    "description": "OCMOD Boilerplate"
+  },
+  "OCMOD file boilerplate": {
+    "prefix": "ocmodf",
+    "body": [
+      "\t<file path=\"$filepath\">",
+      "\t\t<operation>",
+      "\t\t\t<search><![CDATA[  ]]></search>",
+      "\t\t\t<add position=\" \"><![CDATA[ ]]></add>",
+      "\t\t</operation>",
+      "\t</file>"
+    ],
+    "description": "OCMOD file boilerplate"
+  }
+}
