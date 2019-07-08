@@ -12,6 +12,7 @@ PHP page supported snippets:
 - ocm : It creates new Method or function
 - occm : It creates new starter Model class
 - ocl : It creates new variables for language files
+- ocprf : It creates print_r with pre
 
 Twig page supported snippets:
 
@@ -21,6 +22,11 @@ Twig page supported snippets:
 - ocbtn : It creates button markup
 - ocimg : It creates image markup
 - ocbc : It creates breadcrumbs loop in twig files
+
+OCMOD XML page supported snippets:
+
+- ocmod : It creates OCMOD xml code boilerplate
+- ocmodf : It creates OCMOD xml code boilerplate for files only
 
 ## Release Notes
 
