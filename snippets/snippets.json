@@ -2,9 +2,9 @@
   "Controller": {
     "prefix": "occ",
     "body": [
-      "class Controller${1:Folder}${2:ControllerName} extends Controller {",
+      "class Controller${TM_DIRECTORY/^.+\\/(.*)$/$1/}${TM_FILENAME_BASE} extends Controller {",
       "\tpublic function index() {",
-      "\t\t\\$this->load->language('${1:Folder}/${2:ControllerName}');",
+      "\t\t\\$this->load->language('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/${TM_FILENAME_BASE}');",
       "\t\t\\$this->document->setTitle(\\$this->language->get('heading_title'));",
       "\t\t\\$this->document->setDescription(\\$this->language->get['meta_description']);",
       "\t\t\\$this->document->setKeywords(\\$this->language->get['meta_keyword']);",
@@ -15,8 +15,8 @@
       "\t\t\t'href' => \\$this->url->link('common/home')",
       "\t\t);",
       "\t\t\\$data['breadcrumbs'][] = array(",
-      "\t\t\t'text' => \\$this->language->get('text_${2:ControllerName}'),",
-      "\t\t\t'href' => \\$this->url->link('${1:Folder}/${2:ControllerName}', '', true)",
+      "\t\t\t'text' => \\$this->language->get('text_$${TM_FILENAME_BASE}'),",
+      "\t\t\t'href' => \\$this->url->link('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/$${TM_FILENAME_BASE}', '', true)",
       "\t\t);",
       "\n\n",
       "\t\t\\$data['column_left'] = \\$this->load->controller('common/column_left');",
@@ -26,7 +26,7 @@
       "\t\t\\$data['footer'] = \\$this->load->controller('common/footer');",
       "\t\t\\$data['header'] = \\$this->load->controller('common/header');",
       "\n",
-      "\t\t\\$this->response->setOutput(\\$this->load->view('${1:Folder}/${2:ControllerName}', \\$data));",
+      "\t\t\\$this->response->setOutput(\\$this->load->view('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/$${TM_FILENAME_BASE}', \\$data));",
       "\t}",
 
       "}"
@@ -41,7 +41,7 @@
   "New Model": {
     "prefix": "occm",
     "body": [
-      "class Model$foldername$mname extends Model",
+      "class Model${TM_DIRECTORY/^.+\\/(.*)$/$1/}${TM_FILENAME_BASE} extends Model",
       "{",
       "\tpublic function get$mname(\\$$mname_id)",
       "\t{",
