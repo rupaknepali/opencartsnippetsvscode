@@ -32,8 +32,16 @@ OCMOD XML page supported snippets:
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### [1.2.1]
+- Auto folder and file name in controller and model class
 
+### [1.2.0]
+- OCMOD support added.
+- ocmod - for install.xml boilerplate creation
+- ocmodf - OCMOD XML file boilerplate
+- ocprf - print_r with pre
+
+### 1.0.0
 - Initial release of Opencart Snippets for VScode
 - Added some snippets. Others are comming soon.
 
