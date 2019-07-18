@@ -15,8 +15,8 @@
       "\t\t\t'href' => \\$this->url->link('common/home')",
       "\t\t);",
       "\t\t\\$data['breadcrumbs'][] = array(",
-      "\t\t\t'text' => \\$this->language->get('text_$${TM_FILENAME_BASE}'),",
-      "\t\t\t'href' => \\$this->url->link('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/$${TM_FILENAME_BASE}', '', true)",
+      "\t\t\t'text' => \\$this->language->get('text_${TM_FILENAME_BASE}'),",
+      "\t\t\t'href' => \\$this->url->link('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/${TM_FILENAME_BASE}', '', true)",
       "\t\t);",
       "\n\n",
       "\t\t\\$data['column_left'] = \\$this->load->controller('common/column_left');",
@@ -26,16 +26,19 @@
       "\t\t\\$data['footer'] = \\$this->load->controller('common/footer');",
       "\t\t\\$data['header'] = \\$this->load->controller('common/header');",
       "\n",
-      "\t\t\\$this->response->setOutput(\\$this->load->view('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/$${TM_FILENAME_BASE}', \\$data));",
+      "\t\t\\$this->response->setOutput(\\$this->load->view('${TM_DIRECTORY/^.+\\/(.*)$/$1/}/${TM_FILENAME_BASE}', \\$data));",
       "\t}",
-
       "}"
     ],
     "description": "New Starting Controller"
   },
   "New Method": {
     "prefix": "ocm",
-    "body": ["public function $methodname() {", "\n", "}"],
+    "body": [
+      "public function $methodname() {",
+      "\n",
+      "}"
+    ],
     "description": "New method or function"
   },
   "New Model": {
@@ -45,7 +48,7 @@
       "{",
       "\tpublic function get$mname(\\$$mname_id)",
       "\t{",
-      "\t\t$query = $this->db->query(\"\")",
+      "\t\t\\$$queryname = \\$this->db->query(\"$query\");",
       "\t}",
       "}"
     ],
@@ -53,12 +56,16 @@
   },
   "New Language line": {
     "prefix": "ocl",
-    "body": ["\\$_['text_$variable']        = '$languagetext';"],
+    "body": [
+      "\\$_['text_$variable']        = '$languagetext';"
+    ],
     "description": "New Language line"
   },
   "Print_r": {
     "prefix": "ocprf",
-    "body": ["echo '<pre>'; \n print_r($objectname); \n echo '</pre>';"],
+    "body": [
+      "echo '<pre>'; \n print_r(\\$$objectname); \n echo '</pre>';"
+    ],
     "description": "Print_r function"
   }
 }
