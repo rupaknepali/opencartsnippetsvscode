@@ -34,11 +34,7 @@
   },
   "New Method": {
     "prefix": "ocm",
-    "body": [
-      "public function $methodname() {",
-      "\n",
-      "}"
-    ],
+    "body": ["public function $methodname() {", "\n", "}"],
     "description": "New method or function"
   },
   "New Model": {
@@ -56,16 +52,261 @@
   },
   "New Language line": {
     "prefix": "ocl",
-    "body": [
-      "\\$_['text_$variable']        = '$languagetext';"
-    ],
+    "body": ["\\$_['text_$variable']        = '$languagetext';"],
     "description": "New Language line"
   },
   "Print_r": {
     "prefix": "ocprf",
-    "body": [
-      "echo '<pre>'; \n print_r(\\$$objectname); \n echo '</pre>';"
-    ],
+    "body": ["echo '<pre>'; \n print_r(\\$$objectname); \n echo '</pre>';"],
     "description": "Print_r function"
+  },
+  "Cache get": {
+    "prefix": "occacheget",
+    "body": ["\\$this->cache->get('$cachename')"],
+    "description": "Cache Get"
+  },
+  "Cache Set": {
+    "prefix": "occacheset",
+    "body": ["\\$this->cache->set('$cachename')"],
+    "description": "Cache Set"
+  },
+  "Cache Delete": {
+    "prefix": "occachedelete",
+    "body": ["\\$this->cache->delete('$cachename')"],
+    "description": "Cache Delete"
+  },
+  "Config Get": {
+    "prefix": "occonfigget",
+    "body": ["\\$this->config->get('$configname')"],
+    "description": "Cache Get"
+  },
+  "Config Set": {
+    "prefix": "occonfigset",
+    "body": ["\\$this->config->set('$configname')"],
+    "description": "Cache Set"
+  },
+  "Config Has": {
+    "prefix": "occonfighas",
+    "body": ["\\$this->config->has('$configname')"],
+    "description": "Cache Has"
+  },
+  "Database Query": {
+    "prefix": "ocdbquery",
+    "body": ["\\$this->db->query('$query')"],
+    "description": "Database Query"
+  },
+  "Database Escape": {
+    "prefix": "ocdbescape",
+    "body": ["\\$this->db->escape('$query')"],
+    "description": "Database Escape"
+  },
+  "Database Count": {
+    "prefix": "ocdbcount",
+    "body": ["\\$this->db->countAffected()"],
+    "description": "Database Count"
+  },
+  "Database Get Last Id": {
+    "prefix": "ocdbgetlastid",
+    "body": ["\\$this->db->getLastId()"],
+    "description": "Database Get Last Id"
+  },
+  "Document Set Title": {
+    "prefix": "ocdocumentsettitle",
+    "body": ["\\$this->document->setTitle('$title')"],
+    "description": "Document Set Title"
+  },
+  "Document Get Title": {
+    "prefix": "ocdocumentgettitle",
+    "body": ["\\$this->document->getTitle()"],
+    "description": "Document Get Title"
+  },
+  "Document Set Description": {
+    "prefix": "ocdocumentsetdescription",
+    "body": ["\\$this->document->setDescription('$description')"],
+    "description": "Document Set Description"
+  },
+  "Document Get Description": {
+    "prefix": "ocdocumentgetdescription",
+    "body": ["\\$this->document->getDescription()"],
+    "description": "Document Get Description"
+  },
+  "Document Set Keywords": {
+    "prefix": "ocdocumentsetkeywords",
+    "body": ["\\$this->document->setKeywords('$keywords')"],
+    "description": "Document Set Keywords"
+  },
+  "Document Get Keywords": {
+    "prefix": "ocdocumentgetkeywords",
+    "body": ["\\$this->document->getKeywords()"],
+    "description": "Document Get Keywords"
+  },
+  "Document Add Links": {
+    "prefix": "ocdocumentaddlinks",
+    "body": ["\\$this->document->addLinks($href, $rel)"],
+    "description": "Document Add Links"
+  },
+  "Document Get Links": {
+    "prefix": "ocdocumentgetlinks",
+    "body": ["\\$this->document->getLinks()"],
+    "description": "Document Get Links"
+  },
+  "Document Add Styles": {
+    "prefix": "ocdocumentaddstyles",
+    "body": ["\\$this->document->addStyles($href, $rel, $media)"],
+    "description": "Document Add Links"
+  },
+  "Document Get Styles": {
+    "prefix": "ocdocumentgetstyles",
+    "body": ["\\$this->document->getStyles()"],
+    "description": "Document Get Styles"
+  },
+  "Document Add Scripts": {
+    "prefix": "ocdocumentaddscripts",
+    "body": ["\\$this->document->addScripts($href, $postion)"],
+    "description": "Document Add Scripts"
+  },
+  "Document Get Scripts": {
+    "prefix": "ocdocumentgetscripts",
+    "body": ["\\$this->document->getScripts($postion)"],
+    "description": "Document Get Scripts"
+  },
+  "Encryption Encrypt": {
+    "prefix": "ocencryptionencrypt",
+    "body": ["\\$this->encryption->encrypt($key, $value) "],
+    "description": "Encryption Encrypt"
+  },
+  "Encryption Decrypt": {
+    "prefix": "ocencryptiondecrypt",
+    "body": ["\\$this->encryption->decrypt($key, $value) "],
+    "description": "Encryption Decrypt"
+  },
+  "Language Set": {
+    "prefix": "oclanguageset",
+    "body": ["\\$this->language->set($key, $value)"],
+    "description": "Language Set"
+  },
+  "Language Get": {
+    "prefix": "oclanguageget",
+    "body": ["\\$this->language->get($key)"],
+    "description": "Language Get"
+  },
+  "Language All": {
+    "prefix": "oclanguageall",
+    "body": ["\\$this->language->all()"],
+    "description": "Language All"
+  },
+  "Language Load file": {
+    "prefix": "oclanguageload",
+    "body": ["\\$this->language->load('$filename')"],
+    "description": "Language Load file"
+  },
+  "Log Message": {
+    "prefix": "oclog",
+    "body": ["\\$this->log->write($message)"],
+    "description": "Log Message"
+  },
+  "Mail": {
+    "prefix": "ocmail",
+    "body": [
+      "\\$mail = new Mail(\\$this->config->get('config_mail_engine'));",
+      "\\$mail->parameter = \\$this->config->get('config_mail_parameter');",
+      "\\$mail->smtp_hostname = \\$this->config->get('config_mail_smtp_hostname');",
+      "\\$mail->smtp_username = \\$this->config->get('config_mail_smtp_username');",
+      "\\$mail->smtp_password = html_entity_decode(\\$this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');",
+      "\\$mail->smtp_port = \\$this->config->get('config_mail_smtp_port');",
+      "\\$mail->smtp_timeout = \\$this->config->get('config_mail_smtp_timeout');",
+      "\\$mail->setTo($email);",
+      "\\$mail->setFrom(\\$this->config->get('config_email'));",
+      "\\$mail->setSender(html_entity_decode(\\$this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));",
+      "\\$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));",
+      "\\$mail->setHtml($message);",
+      "\\$mail->send(); "
+    ],
+    "description": "Mail"
+  },
+  "Pagination": {
+    "prefix": "ocpagination",
+    "body": [
+      "\\$pagination = new Pagination();",
+      "\\$pagination->total = $total;",
+      "\\$pagination->page = \\$page;",
+      "\\$pagination->limit = $this->config->get('config_limit_admin');",
+      "\\$pagination->url = \\$this->url->link('$routelink', \\$url . '&page={page}', true);",
+      "\n",
+      "\\$data['pagination'] = \\$pagination->render();"
+    ],
+    "description": "Pagination"
+  },
+  "$_GET request": {
+    "prefix": "ocrequestget",
+    "body": ["\\$this->request->get['$getparamater']"],
+    "description": "$_GET request"
+  },
+  "$_POST request": {
+    "prefix": "ocrequestpost",
+    "body": ["\\$this->request->post['$postparamater']"],
+    "description": "$_POST request"
+  },
+  "$_COOKIE request": {
+    "prefix": "ocrequestcookie",
+    "body": ["\\$this->request->cookie['$cookiename']"],
+    "description": "$_COOKIE request"
+  },
+  "$_FILES request": {
+    "prefix": "ocrequestfiles",
+    "body": ["\\$this->request->files['$filename']"],
+    "description": "$_COOKIE request"
+  },
+  "$_SERVER request": {
+    "prefix": "ocrequestserver",
+    "body": ["\\$this->request->server['REQUEST_METHOD']"],
+    "description": "$_SERVER request"
+  },
+  "Response redirect": {
+    "prefix": "ocresponseredirect",
+    "body": [
+      "\\$this->response->redirect($this->url->link($route, $args, $secure)));"
+    ],
+    "description": "Response redirect"
+  },
+  "Response SetOutput": {
+    "prefix": "ocresponsesetoutput",
+    "body": [
+      "\\$this->response->setOutput($this->load->view('$route', $data));"
+    ],
+    "description": "Response set output"
+  },
+  "Response JSON": {
+    "prefix": "ocresponsejson",
+    "body": [
+      "\\$this->response->addHeader('Content-Type: application/json');",
+      "\\$this->response->setOutput(json_encode(\\$json));"
+    ],
+    "description": "Response JSON"
+  },
+  "Session Data": {
+    "prefix": "ocsession",
+    "body": ["\\$this->session->data['$dataname']"],
+    "description": "Session Data"
+  },
+  "URL link": {
+    "prefix": "ocurllink",
+    "body": ["\\$this->url->link($route, $args, $secure)"],
+    "description": "URL link"
+  },
+  "Cart": {
+    "prefix": "occart",
+    "body": ["\\$this->cart->"],
+    "description": "Cart"
+  },
+  "Currency format": {
+    "prefix": "occurrency",
+    "body": ["\\$this->currency->format($number, $currency, $value, $format)"],
+    "description": "Currency format"
+  },
+  "Check user permission": {
+    "prefix": "occurrency",
+    "body": ["\\$this->user->hasPermission($key, $value)"],
+    "description": "Check user permission"
   }
 }
