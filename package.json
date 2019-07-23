@@ -1,7 +1,7 @@
 {
   "name": "ocsnippets",
   "displayName": "Opencart Code snippets",
-  "description": "Opencart code snippets",
+  "description": "This VSCode extension is for OpenCart developer which has a collection of OpenCart snippets. This is just start, Please let us know if need to add more [Contact Us](https://webocreation.com/contact)",
   "version": "1.3.0",
   "repository": {
     "type": "git",
