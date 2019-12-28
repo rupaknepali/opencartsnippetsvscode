@@ -56,9 +56,6 @@ PHP page supported snippets:
 - occurrency: Currency format 
 - occheckuserpermission: Check user permission
 
-
-
-
 Twig page supported snippets:
 
 - oct : It creates starting template layouts in twig files
@@ -76,6 +73,11 @@ OCMOD XML page supported snippets:
 ## Release Notes
 
 Users appreciate release notes as you update your extension.
+
+### [1.3.0]
+
+- Added global methods and updated the Readme
+- See all variables in twig [How to see all variables available in twig template in Opencart](https://webocreation.com/blog/how-to-see-all-variables/)
 
 ### [1.3.0]
 
