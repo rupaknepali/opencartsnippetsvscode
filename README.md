@@ -13,6 +13,51 @@ PHP page supported snippets:
 - occm : It creates new starter Model class
 - ocl : It creates new variables for language files
 - ocprf : It creates print_r with pre
+- occacheget: It creates to get the cache
+- occacheset: It creates to set the cache
+- occachedelete: It creates to delete the cache
+- occonfigget: It creates to get the config
+- occonfigset: It creates to set the config
+- ocdbquery: It creates to query the database
+- ocdbescape: It creates to escape the database fields
+- ocdbcount: It creates to count the rows affected of the database
+- ocdocumentsettitle: $this->document->setTitle(title)
+- ocdocumentgettitle: $this->document->getTitle()
+- ocdocumentsetdescription: $this->document->setDescription()
+- ocdocumentgetdescription: $this->document->getDescription()
+- ocdocumentsetkeywords: $this->document->setKeywords()
+- ocdocumentgetkeywords: $this->document->getKeywords()
+- ocdocumentaddlinks: $this->document->addLinks()
+- ocdocumentgetlinks: $this->document->getLinks()
+- ocdocumentaddstyles: $this->document->addStyles(....)
+- ocdocumentgetstyles: $this->document->getStyles()
+- ocdocumentaddscripts: $this->document->addScripts(..)
+- ocdocumentgetscripts: $this->document->getScripts(postion)
+- ocencryptionencrypt: $this->encryption->encrypt(...)
+- ocencryptiondecrypt: $this->encryption->decrypt(...)
+- oclanguageset: $this->language->set(...)
+- oclanguageget: $this->language->get(key)
+- oclanguageall: $this->language->all()
+- oclanguageload: $this->language->load(filename)
+- oclog: $this->log->write(message)
+- ocmail: It creates the new Mail, it parameter, SMTP configuration needed, set to, set from, set subject, set the html type and send code.
+- ocpagination: It creates the code for basic pagination needed.
+- ocrequestget: $this->request->get[...]
+- ocrequestpost: $this->request->post[...]
+- ocrequestcookie: $this->request->cookie[cookiename]
+- ocrequestfiles: $this->request->files[filename]
+- ocrequestserver: $this->request->server[REQUEST_METHOD]
+- ocresponseredirect: Response redirect code
+- ocresponsesetoutput: Response set output
+- ocresponsejson: Response JSON code
+- ocsession: Session Data
+- ocurllink: URL link
+- occart: Cart $this->cart->
+- occurrency: Currency format 
+- occheckuserpermission: Check user permission
+
+
+
 
 Twig page supported snippets:
 

@@ -35,12 +35,20 @@
   },
   "Twig for": {
     "prefix": "octfor",
-    "body": ["{% for $name1 in $name1s %}", "\t\t$name1", "{% endfor %}"],
+    "body": [
+      "{% for $name1 in $name1s %}",
+      "\t\t$name1",
+      "{% endfor %}"
+    ],
     "description": "Twig for loop"
   },
   "Twig if": {
     "prefix": "octif",
-    "body": ["{% if $name2 %}", "\n", "{% endif %}"],
+    "body": [
+      "{% if $name2 %}",
+      "\n",
+      "{% endif %}"
+    ],
     "description": "Twig for loop"
   },
   "Button Tag": {
@@ -68,5 +76,16 @@
       "</ul>"
     ],
     "description": "Breadcrumbs"
+  },
+  "See all variables available in twig": {
+    "prefix": "ocallvariables",
+    "body": [
+      "<ol>",
+      "\t{% for key, value in _context  %}",
+      "\t\t<li>{{ key }}</li>",
+      "\t{% endfor %}",
+      "</ol>"
+    ],
+    "description": "See all variables available in twig"
   }
 }

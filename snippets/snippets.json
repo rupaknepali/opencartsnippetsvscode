@@ -305,7 +305,7 @@
     "description": "Currency format"
   },
   "Check user permission": {
-    "prefix": "occurrency",
+    "prefix": "occheckuserpermission",
     "body": ["\\$this->user->hasPermission($key, $value)"],
     "description": "Check user permission"
   }
