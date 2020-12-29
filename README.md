@@ -2,6 +2,10 @@
 
 This VSCode extension is for OpenCart developer which has a collection of OpenCart snippets. This is just start, Please let us know if need to add more [Contact Us](https://webocreation.com/contact)
 
+## Video Tutorial
+
+[![Opencart Snippets for VScode](https://raw.githubusercontent.com/rupaknepali/opencartsnippetsvscode/master/images/opencart-code-snippets.png)](https://www.youtube.com/watch?v=s22GYicGwBQ)
+
 ## Documentation
 
 All snippets starts with oc. Some of the snippets are:
